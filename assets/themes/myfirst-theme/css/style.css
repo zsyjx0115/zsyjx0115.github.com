@@ -1,0 +1,131 @@
+body{
+  background-color: #eee;
+}
+/* Custom navbar */
+.navbar{
+  padding: 0px 40px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #333;
+  z-index: 999;
+}
+.navbar .navbar-header .brand{
+    float: left;
+    margin: 5px 20px;
+    font-size: 20px;   
+}
+.navbar .nav {
+  float: right; 
+  margin-right: 20px;
+}
+
+.navbar .nav>li>a,
+.navbar-header .brand{
+  margin: 9px;
+  padding: 5px 10px;
+  color: #f5f5f5;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.navbar .nav>li>a:hover,
+.navbar-inverse .brand:hover,
+.navbar-inverse .nav .active>a,
+.navbar-inverse .nav .active>a:hover{
+  background-color: #000;
+  color: #2ABF9E;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3) inset;
+}
+/* Custom content*/
+.container-content{
+  margin-top: 70px;
+  background-color: #fff;
+  box-shadow: 5px 5px 9px #bbb;
+}
+.container-content .row{
+  background-color: #F8F8F8;
+}
+.container-content .row .article{
+  background-color: #fff;
+}
+.container-content .content{
+  padding-left: 60px;
+}
+
+.container-content .tags{
+  padding-top: 20px;
+}
+.container-content .tags .tags-title{
+  font-size: 20px;
+  margin: 10px;
+  color: #2ABF9E;
+  font-weight: bold;
+}
+
+/* tag_box */
+.tag_box {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; }
+
+.tag_box li {
+  line-height: 28px; }
+
+.tag_box li i {
+  opacity: 0.9; }
+
+.tag_box.inline li {
+  float: left; }
+
+.tag_box a {
+  padding: 4px 9px;
+  margin: 3px;
+  background: #eee;
+  color: #555;
+  border-radius: 6px;
+  text-decoration: none; 
+}
+.tag_box a:hover {
+  background-color: #e5e5e5; 
+}
+
+.tag_box a.active {
+  background: #57A957;
+  border: 1px solid #4c964d;
+  color: #FFF; 
+}
+.tag_box a span {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  text-align: center;
+  vertical-align: baseline;
+  background-color: rgba(228,90,162,0.6);
+  border-radius: 10px;
+}
+
+
+  /* posts index */
+.post > h3.title {
+  position: relative;
+  padding-top: 10px; }
+
+.post > h3.title span.date {
+  position: absolute;
+  right: 0;
+  font-size: 0.9em; }
+
+.post > .more {
+  margin: 10px 0;
+  text-align: left; }
+
+/* post-full*/
+.post-full .date {
+  margin-bottom: 20px;
+  font-weight: bold; }
