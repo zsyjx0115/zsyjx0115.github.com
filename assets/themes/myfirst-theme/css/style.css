@@ -8,7 +8,7 @@ body{
   top: 0px;
   left: 0px;
   width: 100%;
-  background-color: #333;
+  background-color: rgba(30,30,30,0.9);
   z-index: 999;
 }
 .navbar .navbar-header .brand{
@@ -30,16 +30,19 @@ body{
   text-decoration: none;
 }
 .navbar .nav>li>a:hover,
-.navbar-inverse .brand:hover,
-.navbar-inverse .nav .active>a,
-.navbar-inverse .nav .active>a:hover{
-  background-color: #000;
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus,
+.navbar .brand:hover,
+.navbar .nav .active>a,
+.navbar .nav .active>a:hover{
+  background-color: #222;
   color: #2ABF9E;
   box-shadow: 3px 3px 4px rgba(0,0,0,0.3) inset;
 }
 /* Custom content*/
 .container-content{
   margin-top: 70px;
+  margin-bottom: 20px;
   background-color: #fff;
   box-shadow: 5px 5px 9px #bbb;
 }
@@ -129,3 +132,15 @@ body{
 .post-full .date {
   margin-bottom: 20px;
   font-weight: bold; }
+
+  /*footer*/
+footer{
+  background-color: #F8F8F8;
+  min-height: 100px;
+  margin-left: -1em;
+  padding-top: 30px;
+}
+
+footer p{
+  text-align: center;
+}
