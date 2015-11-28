@@ -1,0 +1,58 @@
+/*homepage content style*/
+.content ul.posts{
+  list-style: none;
+  margin: 0px 10px;
+  padding: 0px;
+}
+
+.content ul.posts li.post-article{
+  margin: 20px 0px;
+  min-height: 150px;
+  border-bottom: 1px solid #eee;
+}
+.content ul.posts li.post-article .post-heading{
+  font-size: 28px
+}
+.content ul.posts li.post-article .post-heading a{
+  color: #999;
+  text-decoration: none;
+}
+
+.content ul.posts li.post-article .post-heading a:hover{
+  color: #2ABF9E;
+}
+
+.content ul.posts li.post-article .post-body{
+  text-indent: 2em;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.content ul.posts li.post-article .date{
+  position: relative;
+  left: -120px;
+  top: -60px;
+  width: 90px;
+  height: 90px;
+  background-color: #2ABF9E;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 20px;
+}
+.content ul.posts li.post-article .date span{
+  position: absolute;
+}
+.content ul.posts li.post-article .date .year{
+  top: 7px;
+  left: 30px;
+}
+.content ul.posts li.post-article .date .day{
+  top: 16px;
+  left: 22px;
+  font-size: 40px;
+}
+.content ul.posts li.post-article .date .month{
+  top: 65px;
+  left: 36px;
+} 
