@@ -6,11 +6,14 @@
 }
 
 .content ul.posts li.post-article{
+  position: relative;
   margin: 20px 0px;
-  min-height: 150px;
+  padding-bottom: 60px;
+  min-height: 200px;
   border-bottom: 1px solid #eee;
 }
 .content ul.posts li.post-article .post-heading{
+  margin-top: 50px;
   font-size: 28px
 }
 .content ul.posts li.post-article .post-heading a{
@@ -23,15 +26,24 @@
 }
 
 .content ul.posts li.post-article .post-body{
+  margin-top: 10px;
   text-indent: 2em;
-  font-size: 14px;
-  font-family: sans-serif;
+  font-size: 16px;
 }
-
+.content ul.posts li.post-article .link-box{
+  position: absolute;
+  left: 70px;
+  top: 150px;
+  font-size: 18px;
+}
+.content ul.posts li.post-article .link-box a{
+  color: #2ABF9E;
+  text-decoration: none;
+}
 .content ul.posts li.post-article .date{
-  position: relative;
-  left: -120px;
-  top: -60px;
+  position: absolute;
+  left: -130px;
+  top: 10px;
   width: 90px;
   height: 90px;
   background-color: #2ABF9E;
@@ -56,3 +68,155 @@
   top: 65px;
   left: 36px;
 } 
+
+.container-content ul.pagination{
+  list-style: none;
+  width: 100%;
+  height: 35px;
+  padding: 0px 15%;
+  margin: 20px 0px;
+}
+ul.pagination li{
+    display: inline-block;
+}
+ul.pagination li a{
+  color: #333;
+}
+ul.pagination li a:hover{
+  color: #2ABF9E;
+}
+ul.pagination li span{
+  color: #999;
+}
+ul.pagination li.active a,
+ul.pagination li.active a:focus,
+ul.pagination li.active a:hover,
+ul.pagination li.active span,
+ul.pagination li.active span:focus,
+ul.pagination li.active span:hover{
+  background-color: #2ABF9E;
+  color: #fff;
+  border-color: #2ABF9E;
+}
+
+ul.pagination li.first,
+ul.pagination li.last{
+  margin: 0px 10px;
+  letter-spacing: 2px;
+}
+ul.pagination li.more span{
+  border: none;
+  font-weight: bold;
+}
+ul.pagination li.more span:hover{
+  background-color: #fff;
+  color: #999;
+  cursor: auto;
+}
+ul.pagination li.previous,
+ul.pagination li.next,
+ul.pagination li.more{
+  margin: 0px 5px;
+}
+ul.pagination li.page_number{
+  margin: 0px -2px;
+}
+
+ul.pagination li.total-pages span,
+ul.pagination li.total-pages span:focus,
+ul.pagination li.total-pages span:hover{
+  background-color: #fff;
+  color: #2ABF9E;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+/*链接跳动动画*/
+.link-hover{
+  -webkit-animation-name: click-jump;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: link;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes click-jump{
+  0%{
+    -webkit-transform: translate3d(0, 0, 0) rotate(15deg);
+  }
+  25%{
+    -webkit-transform: translate3d(100px, 30px, 0) rotate(-15deg) scale(0.7,0.7);
+  }
+  50%{
+    -webkit-transform: translate3d(100px, -30px, 0) rotate(20deg) scale(1.5,1.5);
+  }
+  75%{
+    -webkit-transform: translate3d(-100px, 30px, 0) rotate(-20deg);
+  }
+  100%{
+    -webkit-transform: translate3d(-100px, -30px, 0) rotate(15deg);
+  }
+}
+
+@-moz-keyframes click-jump{
+  0%{
+    -moz-transform: translate3d(0, 0, 0) rotate(15deg);
+  }
+  25%{
+    -moz-transform: translate3d(100px, 30px, 0) rotate(-15deg) scale(0.7,0.7);
+  }
+  50%{
+    -moz-transform: translate3d(100px, -30px, 0) rotate(20deg) scale(1.5,1.5);
+  }
+  75%{
+    -moz-transform: translate3d(-100px, 30px, 0) rotate(-20deg);
+  }
+  100%{
+    -moz-transform: translate3d(-100px, -30px, 0) rotate(15deg);
+  }
+}
+
+/*标题闪烁*/
+.headingshake {
+    -webkit-animation-name: headingshake;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-name: headingshake;
+    -moz-animation-duration: 0.5s;
+}
+
+@-webkit-keyframes headingshake {
+    /* 补充代码使logo产生左右晃动效果 */ 
+     0%, 100% {
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    15%,
+    45%,
+    75% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+    }
+    30%,
+    60%,
+    90% {
+        -webkit-transform: translate3d(5px, 0, 0);
+    }
+}
+
+@-moz-keyframes headingshake {
+    /* 补充代码使logo产生左右晃动效果 */ 
+    0%, 100% {
+        -moz-transform: translate3d(0, 0, 0);
+    }
+    15%,
+    45%,
+    75% {
+        -moz-transform: translate3d(-5px, 0, 0);
+    }
+    30%,
+    60%,
+    90% {
+        -moz-transform: translate3d(5px, 0, 0);
+    }
+}

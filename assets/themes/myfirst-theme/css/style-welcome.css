@@ -1,0 +1,23 @@
+html{
+  margin-top: -20px;
+}
+#welcome{
+	width: 100%;
+	height: 615px;
+	background-image: url("images/tea.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#transparent{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+
+
+.navbar{
+  border: none;
+}
+

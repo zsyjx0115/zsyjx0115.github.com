@@ -1,9 +1,11 @@
-
+body,button, input, select, h1 ,h2, h3, h4, h5, h6,span,a,p{ 
+  font-family: "Microsoft YaHei", Tahoma, Helvetica, Arial, sans-serif;
+}
 body{
   background-color: #eee;
 }
 /* Custom navbar */
-.navbar{
+.navbar-fixed{
   padding: 0px 40px;
   position: fixed;
   top: 0px;
@@ -13,9 +15,9 @@ body{
   z-index: 999;
 }
 .navbar .navbar-header .brand{
-    float: left;
-    margin: 5px 20px;
-    font-size: 20px;   
+  float: left;
+  margin: 5px 20px;
+  font-size: 20px;   
 }
 .navbar .nav {
   float: right; 
@@ -42,13 +44,15 @@ body{
 }
 /* Custom content*/
 .container-content{
-  margin-top: 70px;
+  margin-top: 60px;
   margin-bottom: 20px;
   background-color: #fff;
   box-shadow: 5px 5px 9px #bbb;
+  padding: 0px;
 }
 .container-content .row{
   background-color: #F8F8F8;
+  margin: 0px;
 }
 .container-content .row .article{
   background-color: #fff;
@@ -138,10 +142,10 @@ body{
 footer{
   background-color: #F8F8F8;
   min-height: 100px;
-  margin-left: -1em;
   padding-top: 30px;
 }
 
 footer p{
   text-align: center;
+  margin: 0px;
 }

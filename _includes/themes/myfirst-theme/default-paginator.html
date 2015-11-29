@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/homepage-style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/style-welcome.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div id="welcome">
+      <div id="transparent">
+        <h1></h1>
+        <h4></h4>
+        <p></p>
+      </div>
+    </div>
+    <div class="navbar navbar-inverse">
+      <div class="navbar-header">
+        <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+         <span class="sr-only">Toggle Navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+      </div><!-- navbar-header end-->
+      <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          {% assign pages_list = site.pages %}
+          {% assign group = 'navigation' %}
+          {% include JB/pages_list %}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container container-content">
+        <div class="row">
+          <div class="col-md-9 col-sm-9 article">
+            <div class="content">
+              {{ content }}
+            </div>
+          </div><!-- col end -->
+          <div class="col-md-3 col-sm-3">
+            <div class="tags">
+              <div class="tags-title">
+                Tags
+              </div>
+              <ul class="tag_box inline">
+                {% assign tags_list = site.tags %}  
+                {% include JB/tags_list %}
+              </ul>
+            </div>
+          </div><!-- col end -->
+       </div><!-- row end -->
+
+      <ul class="pagination">
+        <!-- 分页代码 -->
+        <!-- 上一页 -->
+        {% if paginator.previous_page == 1 %} 
+          <li class="first "><a href="/">首页</a></li>
+          <li class="previous"><a href="/">&lt;&lt;</a></li>
+        {% elsif paginator.previous_page > 1 %}
+          <li class="first "><a href="/">首页</a></li>
+          <li class="previous"><a href="/page{{ paginator.previous_page }}">&lt;&lt;</a></li>
+        {% else %}  
+          <li class="first disabled"><span>首页</span></li>  
+          <li class="previous disabled"><span>&lt;&lt;</span></li>
+        {% endif %}  
+        
+
+        <!-- 总页数大于5时不全部显示 -->
+        {% if paginator.total_pages > 4 %}
+          <!-- 总页数大于5时，当前页码大于总页码-4时，显示第一页、最后三页-->
+          {% if paginator.next_page == paginator.total_pages %}
+            <li class="more"><span>...</span><li>
+            <li class="page_number "><a href="/page{{ paginator.page | minus:1}}">{{ paginator.page | minus:1}}</a></li>
+            <li class="page_number active"><span class="current-page">{{ paginator.page }}</span></li>
+            <li class="page_number "><a href="/page{{ paginator.page | plus:1}}">{{ paginator.page | plus:1}}</a></li>
+          {% elsif paginator.page == paginator.total_pages %}
+            <li class="more"><span>...</span><li>
+            <li class="page_number "><a href="/page{{ paginator.page | minus:2}}">{{ paginator.page | minus:2}}</a></li>
+            <li class="page_number"><a href="/page{{ paginator.page | minus:1}}">{{ paginator.page | minus:1}}</a></li>
+            <li class="page_number active"><span class="current-page">{{ paginator.page}}</span></li>
+          <!-- 总页数大于5时，当前页码大于4且小于总页码-4时时，显示第一页、最后一页、当前页及其周围两页-->
+          {% elsif paginator.page > 2 %}
+            <li class="more"><span>...</span><li>
+            {% for count in (1..paginator.total_pages)%}
+              {% if count == paginator.page %}
+                <li class="page_number "><a href="/page{{ count | minus:1}}">{{ count | minus:1}}</a></li>
+                <li class="page_number active"><span class="current-page">{{ count }}</span></li>
+                <li class="page_number "><a href="/page{{ count | plus:1}}">{{ count | plus:1}}</a></li>             
+              {% endif %}
+            {% endfor %}
+            <li class="more"><span>...</span><li>
+          <!-- 总页数大于5时，当前页码小于4时，显示前三页和最后一页 -->
+          {% elsif paginator.page > 0 %}
+            {% for count in (1..paginator.total_pages) limit:3%}
+              {% if count == paginator.page %}
+                <li class="page_number active"><span class="current-page">{{ count }}</span></li>
+              {% elsif count == 1%}
+                <li class="page_number "><a href="/">1</a></li>
+              {% else %}
+                <li class="page_number "><a href="/page{{ count }}">{{ count }}</a></li>
+              {% endif %}
+            {% endfor %}
+            <li class="more"><span>...</span><li>
+           {% endif %}
+        <!-- 总页数小于5时全部显示 -->
+        {% else %}
+          {% for count in (1..paginator.total_pages) %}
+            {% if count == paginator.page %}
+              <li class="page_number active"><span class="current-page">{{ count }}</span></li>
+            {% elsif count == 1%}
+              <li class="page_number "><a href="/">1</a></li>
+            {% else %}
+              <li class="page_number "><a href="/page{{ count }}">{{ count }}</a></li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+
+        <!-- 下一页 -->
+        {% if paginator.next_page %}    
+          <li class="next"><a href="/page{{ paginator.next_page }}" class="next">&gt;&gt;</a></li>
+          <li class="last"><a href="/page{{ paginator.total_pages }}">末页</a></li>
+        {% else %}    
+          <li class="next disabled"><span>&gt;&gt;</span></li>
+          <li class="last disabled"><span>末页</span></li>
+        {% endif %}
+
+        <li class="total-pages"><span>共 {{ paginator.total_pages }} 页</span></li>
+      </ul>
+      <footer>
+        <p>with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+        </p>
+        <p>
+          Theme Designed &amp; Coded by {{ site.author.name }} &copy; {{ site.time | date: '%Y' }}
+        </p>
+      </footer>
+    </div><!-- container end -->
+    {% include JB/analytics %}
+    <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/linkjump.js"></script>
+  </body>
+</html>
