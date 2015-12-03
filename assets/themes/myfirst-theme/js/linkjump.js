@@ -1,18 +1,27 @@
 $(document).ready(function() {
-	//控制welcome page中菜单栏跟随页面滚动的位置变换
-    $(document).scroll(function() {
-        var $navbar = $(".navbar");
-        var $welcome = $("#welcome");
-        var height = $welcome.height();
-        var scrollTop = $(document).scrollTop();
-        if (height <= scrollTop + 50) {
-            if (scrollTop < height + 80) $(document).scrollTop(height);
-            $navbar.addClass("navbar-fixed");
-            $(".container-content").css("margin-top", "120px");
-        } else {
-            $navbar.removeClass("navbar-fixed");
-        }
-    });
+    var $navbar = $(".navbar");
+    var $welcome = $("#welcome");
+    var $curpage = $("#current-page");
+    if($curpage.val() == 1){
+    	//控制welcome page中菜单栏跟随页面滚动的位置变换
+        $(document).scroll(function() {
+            var height = $welcome.height();
+            var scrollTop = $(document).scrollTop();
+            if (height <= scrollTop + 50) {
+                if (scrollTop < height + 80) $(document).scrollTop(height);
+                $navbar.addClass("navbar-fixed");
+                $(".container-content").css("margin-top", "120px");
+            } else {
+                $navbar.removeClass("navbar-fixed");
+            }
+        });
+    }
+    //若不是第一页则直接跳过#welcome
+    else{
+        $navbar.addClass("navbar-fixed");
+        $(".container-content").css("margin-top", "120px");
+        $welcome.css("display","none");
+    }
 
 	//跳转链接添加动画效果
 	var $linkbox = $(".link-box");
