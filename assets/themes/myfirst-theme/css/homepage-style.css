@@ -1,4 +1,8 @@
 /*homepage content style*/
+
+/*
+*post文章列表样式
+*/
 .content ul.posts{
   list-style: none;
   margin: 0px 10px;
@@ -40,10 +44,13 @@
   color: #2ABF9E;
   text-decoration: none;
 }
+
+/*post文章列表左侧日期标识和brief标题标识样式*/
 .content ul.posts li.post-article .date{
   position: absolute;
   left: -130px;
   top: 10px;
+  z-index: 2;
   width: 90px;
   height: 90px;
   background-color: #2ABF9E;
@@ -51,6 +58,9 @@
   color: #fff;
   font-size: 12px;
   padding: 5px 20px;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in; 
 }
 .content ul.posts li.post-article .date span{
   position: absolute;
@@ -68,7 +78,69 @@
   top: 65px;
   left: 36px;
 } 
+/*简要描述类别*/
+.content ul.posts li.post-article .brief{
+  position: absolute;
+  left: -130px;
+  top: 10px;
+  z-index: 3;
+  width: 90px;
+  height: 90px;
+  background-color: #8B0000;
+  border-radius: 50%;
+  font-size: 32px;
+  padding: 5px 20px;
+  letter-spacing: 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in; 
+}
+.content ul.posts li.post-article .brief a{
+  position: absolute;
+  top: 21px;
+  left: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+/*勋章飘带*/
+.band{
+  position: absolute;
+  top: 50px;
+  left: -100px;
+  z-index: 1;
+  height: 45px;
+  border: 1px solid;
+  border-width: 0px 15px 15px 15px;
+  border-color: #8D0000 #8D0000 transparent #8D0000;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
 
+/*底部tag样式*/
+.content ul.posts li.post-article ul.taglist{
+  position: absolute;
+  bottom: 4px;
+  right: 0px;
+  list-style: none;
+}
+.content ul.posts li.post-article ul.taglist li{
+  display: inline;
+  padding: 0px 3px;
+  border-bottom: 5px solid;
+}
+.content ul.posts li.post-article ul.taglist li a{
+  position: relative;
+  top: 20px;
+  text-decoration: none;
+  color: #999;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+/*
+*分页样式
+*/
 .container-content ul.pagination{
   list-style: none;
   width: 100%;

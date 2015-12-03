@@ -1,7 +1,8 @@
 ---
 layout: lover-animate
-category : animation
+category : 展示
 title : 七夕快乐
+brief: 展示
 tags : [animate,transition]
 describe: 相传农历七月七日夜或七月六日夜妇女在庭院向织女星乞求智巧，故称为“乞巧”。其被赋予牛郎织女的传说使其成为极具浪漫色彩的节日之一。每年这个时候大街小巷都充斥着浪漫的气氛，情侣们都用各式各样的方式来度过这个节日。单身汪们都窝在家里摸摸哭泣，哈哈哈哈~~~闲来做了一个七夕小动画，快点击题目来看吧~~~
 link: 快点我快点我

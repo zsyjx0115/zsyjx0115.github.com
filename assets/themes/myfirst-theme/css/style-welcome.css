@@ -3,7 +3,7 @@ html{
 }
 #welcome{
 	width: 100%;
-	height: 615px;
+	height: 100%;
 	background-image: url("images/tea.jpg");
 	background-size: cover;
 	background-position: center;
@@ -18,6 +18,19 @@ html{
 
 
 .navbar{
+	padding: 0px 40px;
   border: none;
+  top: -6%;
+	background: rgba(0,0,0,0.7);
 }
 
+.navbar .nav>li>a:hover,
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus,
+.navbar .brand:hover,
+.navbar .nav .active>a,
+.navbar .nav .active>a:hover{
+  background-color: rgba(80,80,80,0.5);
+  color: #2ABF9E;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3) inset;
+}
