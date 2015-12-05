@@ -1,6 +1,6 @@
 ---
 layout: lover-animate
-category : 展示
+category : show
 title : 七夕快乐
 brief: 展示
 tags : [animate,transition]

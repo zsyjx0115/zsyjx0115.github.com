@@ -1,6 +1,6 @@
 ---
 layout: post
-category : 展示
+category : show
 title: 简历
 brief: 展示
 tags : [intro, beginner, jekyll, tutorial]

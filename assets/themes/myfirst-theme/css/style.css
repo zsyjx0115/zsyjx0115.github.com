@@ -6,6 +6,13 @@ html,body{
   height: 100%;
   background-color: #eee;
 }
+a{
+  color: #ddd;
+}
+a:hover{
+  color: #fff;
+  text-decoration: none;
+}
 /* Custom navbar */
 div.navbar-fixed{
   position: fixed;

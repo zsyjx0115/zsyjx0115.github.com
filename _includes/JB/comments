@@ -1,3 +1,4 @@
+<div id="comment">
 {% if site.JB.comments.provider and page.comments != false %}
 
 {% case site.JB.comments.provider %}
@@ -16,3 +17,4 @@
 {% endcase %}
 
 {% endif %}
+</div>

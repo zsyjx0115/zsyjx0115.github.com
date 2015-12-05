@@ -1,0 +1,87 @@
+/*post页面标题栏*/
+.page-header{
+	text-align: center;
+}
+.page-header .date{
+	padding-top: 10px;
+}
+
+.page-header > .pagination{
+	position: relative;
+	top: -100px;
+} 
+
+.page-header > .pagination > .prev,
+.page-header > .pagination > .next{
+	position: absolute;
+	width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #ddd;
+}
+
+.page-header > .pagination > .prev{
+	left: -350px;
+}
+
+.page-header > .pagination > .next{
+	left: 300px;
+}
+
+.page-header > .pagination > .prev:hover,
+.page-header > .pagination > .next:hover{
+	color: #fff;
+	background-color: rgba(200,200,200,0.3);
+}
+.page-header > .pagination > .disabled:hover{
+	color: #ddd;
+	background-color: #fff;
+}
+.pagination>.disabled>span, 
+.pagination>.disabled>span:focus, 
+.pagination>.disabled>span:hover{
+	color: #ddd;
+	background-color: #fff;
+}
+
+.glyphicon-menu-left,
+.glyphicon-menu-right{
+	font-size: 35px;
+	margin-top: 5px;
+}
+
+.briefbox{
+	position: relative;
+}
+/*左侧勋章brief*/
+.briefbox .brief{
+  position: absolute;
+  left: -120px;
+  top: -35px;
+  z-index: 2;
+  width: 90px;
+  height: 90px;
+  background-color: #8B0000;
+  border-radius: 50%;
+  font-size: 28px;
+  padding: 5px 20px;
+  letter-spacing: 5px;
+}
+.briefbox .brief .comment-link{
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+/*勋章飘带*/
+.briefbox .band{
+  position: absolute;
+  top: 50px;
+  left: -90px;
+  z-index: 2;
+  height: 45px;
+  border: 1px solid;
+  border-width: 0px 15px 15px 15px;
+  border-color: #8D0000 #8D0000 transparent #8D0000;
+}
