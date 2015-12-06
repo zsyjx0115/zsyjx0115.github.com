@@ -37,6 +37,17 @@
 	color: #ddd;
 	background-color: #fff;
 }
+
+.page-header > .pagination > .prev > a,
+.page-header > .pagination > .next > a{
+  color: #ddd;
+}
+.page-header > .pagination > .prev > a:hover,
+.page-header > .pagination > .next > a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
 .pagination>.disabled>span, 
 .pagination>.disabled>span:focus, 
 .pagination>.disabled>span:hover{
@@ -85,3 +96,4 @@
   border-width: 0px 15px 15px 15px;
   border-color: #8D0000 #8D0000 transparent #8D0000;
 }
+

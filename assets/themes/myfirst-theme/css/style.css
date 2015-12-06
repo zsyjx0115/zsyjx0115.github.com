@@ -6,13 +6,6 @@ html,body{
   height: 100%;
   background-color: #eee;
 }
-a{
-  color: #ddd;
-}
-a:hover{
-  color: #fff;
-  text-decoration: none;
-}
 /* Custom navbar */
 div.navbar-fixed{
   position: fixed;
@@ -146,7 +139,29 @@ div.navbar-fixed .nav .active>a:hover{
   margin-bottom: 20px;
   font-weight: bold; }
 
-  /*footer*/
+/*up to top*/
+.top{
+  position: fixed;
+  right: 158px;
+  bottom: 50px;
+  font-size: 37px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.2);
+  width: 50px;
+  height: 55px;
+  padding-top: 5px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.top:hover{
+  background-color: #2ABF9E;
+  text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/*footer*/
 footer{
   background-color: #F8F8F8;
   min-height: 100px;

@@ -4,7 +4,8 @@ category : lessons
 title : overflow属性
 brief: 学习
 tags : [css]
-describe:  overflow为CSS中设置当对象的内容超过其指定高度及宽度时如何管理内容的属性，规定当内容溢出元素框时发生的事情。
+excerpt:  overflow为CSS中设置当对象的内容超过其指定高度及宽度时如何管理内容的属性，规定当内容溢出元素框时发生的事情。
+id: overflow20141205
 ---
 {% include JB/setup %}
 
@@ -54,6 +55,6 @@ overflow为CSS中设置当对象的内容超过其指定高度及宽度时如何
 		<a class="click" href="#three">3</a>
 		<a class="click" href="#four">4</a>
 	</div>
-	
+
 这样点击link盒子中的a链接即可跳至box盒子中的元素，可实现类选项卡效果。这种实现选项卡的方式虽然简单，但是存在很大的局限性：锚点定位的穿透性很强，会影响外部父元素的滚动位置，页面会产生跳动。故该方法只适用于单屏页面无需滚动的情况，此时制作选项卡效果。
 

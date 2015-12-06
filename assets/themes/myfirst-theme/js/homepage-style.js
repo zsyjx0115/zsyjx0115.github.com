@@ -2,17 +2,29 @@ $(document).ready(function() {
     var $navbar = $(".navbar");
     var $welcome = $("#welcome");
     var $curpage = $("#current-page");
+    var $doc = $(document);
+    var $top = $(".top");
     if($curpage.val() == 1){
+        $welcome.css("display","block");
     	//控制welcome page中菜单栏跟随页面滚动的位置变换
-        $(document).scroll(function() {
+        $doc.scroll(function() {
+            /*控制首页导航栏*/
             var height = $welcome.height();
-            var scrollTop = $(document).scrollTop();
-            if (height <= scrollTop + 50) {
-                if (scrollTop < height + 80) $(document).scrollTop(height);
+            var scrollTop = $doc.scrollTop();
+            if (height <= scrollTop + 40) {
+                if (scrollTop < height + 60) 
+                    $doc.scrollTop(height);
                 $navbar.addClass("navbar-fixed");
                 $(".container-content").css("margin-top", "120px");
             } else {
                 $navbar.removeClass("navbar-fixed");
+            }
+            /*控制up to top按钮的显示*/
+            if(scrollTop > height * 2){
+                $top.css("display","block");
+            }
+            else{
+                $top.css("display","none");
             }
         });
     }
@@ -20,8 +32,40 @@ $(document).ready(function() {
     else{
         $navbar.addClass("navbar-fixed");
         $(".container-content").css("margin-top", "120px");
-        $welcome.css("display","none");
+        /*控制up to top按钮的显示*/
+        $doc.scroll(function() {
+            var height = $welcome.height();
+            var scrollTop = $doc.scrollTop();
+            if(scrollTop > height * 0.5){
+                $top.css("display","block");
+            }
+            else{
+                $top.css("display","none");
+            }
+        });
     }
+    $top.on('click',function(){
+        var scroll = $doc.scrollTop();
+        var dis = Math.floor(scroll / 4);
+        var g = Math.floor(dis / 20);
+        var scrollTo = $curpage.val() == 1 ? $welcome.height() : 0;
+        var time = setInterval(function(){
+            if(scroll == scrollTo){
+                clearInterval(time);
+            }
+            if(scroll < scrollTo + 350){
+                dis = 50;
+                g = 0;
+            }
+            scroll -= dis;
+            scroll = scroll < scrollTo ? scrollTo : scroll;
+            $doc.scrollTop(scroll);
+            dis -= g;
+            dis = dis < 50 ? 50 : dis;
+            g = dis < 50 ? 0 : g + 50;
+            console.log("dis:" + dis + " g" + g + "scroll "+scroll);
+        },50);
+    })
 
 	//跳转链接添加动画效果
 	var $linkbox = $(".link-box");

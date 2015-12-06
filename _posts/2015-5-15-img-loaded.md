@@ -4,7 +4,8 @@ category : lessons
 title : JavaScript判断图片加载完成的方法
 brief: 学习
 tags : [javascript, img]
-describe: 有时需要获取图片的尺寸，这需要在图片加载完成以后才可以；或者监测页面加载情况，需要知道图片何时加载完成。判断图片加载完成有三种方式。
+excerpt: 有时需要获取图片的尺寸，这需要在图片加载完成以后才可以；或者监测页面加载情况，需要知道图片何时加载完成。判断图片加载完成有三种方式。
+id: imgload20150515
 ---
 {% include JB/setup %}
 

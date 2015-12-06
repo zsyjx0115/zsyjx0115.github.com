@@ -82,7 +82,7 @@
             </div>
           </div><!-- col end -->
        </div><!-- row end -->
-       
+
       <!-- 分页代码 -->
       <ul class="pagination">
         <!-- 上一页 -->
@@ -161,19 +161,24 @@
         <li class="total-pages"><span>共 {{ paginator.total_pages }} 页</span></li>
       </ul>
       <input id="current-page" type="hidden" value="{{ paginator.page }}"/>
+
+
+      <div class="top">
+        <span class="glyphicon glyphicon-arrow-up"></span>
+      </div> 
       <footer>
         <!-- <p>with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
         </p>
         <p>
           Theme Designed &amp; Coded by {{ site.author.name }} &copy; {{ site.time | date: '%Y' }}
-        </p>
-      </footer> -->
+        </p> -->
+      </footer>
     </div><!-- container end -->
     {% include JB/analytics %}
     <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{ ASSET_PATH }}/js/linkjump.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/homepage-style.js"></script>
   </body>
 </html>
