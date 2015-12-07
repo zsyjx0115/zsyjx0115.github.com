@@ -6,6 +6,107 @@ html,body{
   height: 100%;
   background-color: #eee;
 }
+body{
+  overflow: hidden;
+}
+/*loading*/
+.waitload{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #2ABF9E;
+}
+.waitload .action-container{
+  width: 150px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 25px 0px;
+  position: relative;
+  top: 350px;
+  list-style: none;
+}
+.waitload .action-container .music-bond{
+  width: 10px;
+  height: 40px;
+  margin: 0px 5px;
+  background-color: #eee;
+  display: inline-block;
+  -webkit-animation-name: music;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count:infinite;
+  -moz-animation-name: music;
+  -moz-animation-duration: 4s;
+  -moz-animation-iteration-count:infinite;
+  -ms-animation-name: music;
+  -ms-animation-duration: 4s;
+  -ms-animation-iteration-count:infinite;
+}
+.waitload .action-container .action1{
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+}
+.waitload .action-container .action2{
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -ms-animation-delay: 0.1s;
+}
+
+.waitload .action-container .action3{
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -ms-animation-delay: 0.2s;
+}
+
+.waitload .action-container .action4{
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s;
+}
+
+.waitload .action-container .action5{
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  -ms-animation-delay: 0.4s;
+}
+
+@-webkit-keyframes music{
+  0%,20%,40%,60%,80%,100%{
+    -webkit-transform: scaleY(1);
+  }
+  5%,25%{
+    -webkit-transform: scaleY(2.5);
+  }
+  45%,65%{
+    -webkit-transform: scaleY(0.3);
+  }
+}
+
+@-moz-keyframes music{
+  0%,20%,40%,60%,80%,100%{
+    -moz-transform: scaleY(1);
+  }
+  5%,25%{
+    -moz-transform: scaleY(2.5);
+  }
+  45%,65%{
+    -moz-transform: scaleY(0.3);
+  }
+}
+
+@-ms-keyframes music{
+  0%,20%,40%,60%,80%,100%{
+    -ms-transform: scaleY(1);
+  }
+  5%,25%{
+    -ms-transform: scaleY(2.5);
+  }
+  45%,65%{
+    -ms-transform: scaleY(0.3);
+  }
+}
+
 /* Custom navbar */
 div.navbar-fixed{
   position: fixed;

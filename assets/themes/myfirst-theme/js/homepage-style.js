@@ -1,8 +1,12 @@
 $(document).ready(function() {
+    $(window).load(function(){
+      $(".waitload").css("display","none");
+      $("body").css("overflow","auto");
+    });
+    var $doc = $(document);
     var $navbar = $(".navbar");
     var $welcome = $("#welcome");
     var $curpage = $("#current-page");
-    var $doc = $(document);
     var $top = $(".top");
     if($curpage.val() == 1){
         $welcome.css("display","block");
