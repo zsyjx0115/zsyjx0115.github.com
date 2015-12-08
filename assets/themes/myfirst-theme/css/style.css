@@ -7,7 +7,7 @@ html,body{
   background-color: #eee;
 }
 body{
-  overflow: hidden;
+  overflow: auto;
 }
 /*loading*/
 .waitload{
@@ -16,6 +16,7 @@ body{
   text-align: center;
   vertical-align: middle;
   background-color: #2ABF9E;
+  display: none;
 }
 .waitload .action-container{
   width: 150px;

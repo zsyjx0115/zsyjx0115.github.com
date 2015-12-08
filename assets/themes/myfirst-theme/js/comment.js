@@ -7,7 +7,12 @@
 // });
 
 $(document).ready(function() {
+	var loadtimer = setTimeout(function(){
+      $(".waitload").css("display","block");
+      $("body").css("overflow","hidden");
+    },1000);
     $(window).load(function(){
+      clearTimeout(loadtimer);
       $(".waitload").css("display","none");
       $(".navbar").addClass("navbar-fixed");
       $("body").css("overflow","auto");

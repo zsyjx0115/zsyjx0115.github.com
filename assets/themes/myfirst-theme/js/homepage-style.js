@@ -1,5 +1,10 @@
 $(document).ready(function() {
+    var loadtimer = setTimeout(function(){
+        $(".waitload").css("display","block");
+      $("body").css("overflow","hidden");
+    },500);
     $(window).load(function(){
+      clearTimeout(loadtimer);
       $(".waitload").css("display","none");
       $("body").css("overflow","auto");
     });
