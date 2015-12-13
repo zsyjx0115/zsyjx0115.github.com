@@ -4,8 +4,7 @@ category : lessons
 title : margin重叠问题
 brief: 学习
 tags : [CSS, margin]
-excerpt: 两个毗邻盒子元素的margin值会共用，毗邻是指同级和嵌套元素，若这两个盒子之间没有非空内容、padding、border进行分隔，则都会共用margin值（貌似只是margin-top会共用）
-边界重叠是指两个或多个盒子(可能相邻也可能嵌套)的相邻边界(其间没有任何非空内容、补白、边框)重合在一起而形成一个单一边界。
+excerpt: 两个毗邻盒子元素的margin值会共用，毗邻是指同级和嵌套元素，若这两个盒子之间没有非空内容、padding、border进行分隔，则都会共用margin值
 id: marginoverlap20151205
 ---
 
