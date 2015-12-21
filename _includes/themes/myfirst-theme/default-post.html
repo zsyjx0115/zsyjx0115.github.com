@@ -17,7 +17,7 @@
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/css/achive-style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/post-style.css" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/css/comment.css" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
@@ -70,7 +70,24 @@
     
     <!-- 文章页面具体内容 -->
     <div class="container container-content">
-      {{ content }}
+      <div class="row">
+          <div class="col-md-9 col-sm-9 article">
+            <div class="content">
+              {{ content }}
+            </div>
+          </div><!-- col end -->
+          <div class="col-md-3 col-sm-3">
+            <div class="tags">
+              <div class="tags-title">
+                Tags
+              </div>
+              <ul class="tag_box inline">
+                {% assign tags_list = site.tags %}  
+                {% include JB/tags_list %}
+              </ul>
+            </div>
+          </div><!-- col end -->
+       </div><!-- row end -->
 
       <div class="top">
         <span class="glyphicon glyphicon-arrow-up"></span>
@@ -88,8 +105,13 @@
     <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{ ASSET_PATH }}/js/achieve.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/comment.js"></script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/top.js"></script>
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+                  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+                        });
+</script>
 <!-- <script type="text/javascript" src="path-to-mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
     <script type="text/javascript"
      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">

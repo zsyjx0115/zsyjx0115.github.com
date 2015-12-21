@@ -65,6 +65,21 @@ h1, h2, h3, h4, h5, h6, p{
 	color: #eee;
 }
 
+@keyframes down{
+	0%,100%{
+		transform: translateY(0px);
+	}
+	20%,80%{
+		transform: translateY(-4px);
+	}
+	40%,60%{
+		transform: translateY(-8px);
+	}
+	50%{
+		transform: translateY(-10px);
+	}
+}
+
 @-webkit-keyframes down{
 	0%,100%{
 		-webkit-transform: translateY(0px);
