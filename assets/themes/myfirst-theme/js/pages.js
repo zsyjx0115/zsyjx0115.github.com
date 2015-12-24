@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	/*
+	**Achieve Page
+	*/
 	var $content = $(".span12");
 	var total_height = $content.outerHeight();
 	//alert(total_height);
@@ -24,6 +27,26 @@ $(document).ready(function(){
 				$achieve.children().last().css("border-right-color", color);
 		});
 	});
+
+	/*
+	**Tags Page
+	*/
+	var $tagCenter = $(".tag-center");
+	$tagCenter.each(function(){
+		$this = $(this);
+		var height = $this.parent().outerHeight();
+		$this.height(height);
+	});
+
+
+	/*
+	**Categories Page
+	*/
+
+
+	/*
+	**Pages Page
+	*/
 });
 
 function GenerateColor(){

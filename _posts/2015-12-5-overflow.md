@@ -3,7 +3,7 @@ layout: post
 category : lessons
 title : overflow属性
 brief: 学习
-tags : [css]
+tags : [CSS]
 excerpt:  overflow为CSS中设置当对象的内容超过其指定高度及宽度时如何管理内容的属性，规定当内容溢出元素框时发生的事情。
 id: overflow20141205
 ---
