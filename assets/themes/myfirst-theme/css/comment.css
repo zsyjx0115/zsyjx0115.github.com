@@ -30,7 +30,7 @@
     top: -10px;
     right: 10px;
 }
-#ds-thread #ds-reset ul{
+#ds-thread #ds-reset .ds-comments-tabs{
 	display: none;
 }
 
