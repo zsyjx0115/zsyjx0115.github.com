@@ -145,6 +145,60 @@
   -ms-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
+
+
+@media screen and (max-width : 870px){
+  .content ul.posts li.post-article .date{
+    left: -75px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #8D0000;
+  }
+  .content ul.posts li.post-article .date span{
+    position: absolute;
+  }
+  .content ul.posts li.post-article .date .year{
+    top: 5px;
+    left: 12px;
+    font-weight: bold;
+  }
+  .content ul.posts li.post-article .date .day{
+    top: 25px;
+    left: 26px;
+    font-size: 12px;
+    font-style: italic;
+  }
+  .content ul.posts li.post-article .date .month{
+    top: 25px;
+    left: 8px;
+    font-style: italic;
+  } 
+  /*简要描述类别*/
+  .content ul.posts li.post-article .brief{
+    display: none;
+  }
+
+  /*勋章飘带*/
+  .band{
+    left: -58px;
+    height: 35px;
+    border-width: 0px 8px 13px 8px;
+    opacity: 1;
+  }
+
+  .link-box{
+    display: none;
+  }
+  /*底部tag样式*/
+  .content ul.posts li.post-article ul.taglist li a{
+    top: -5px;
+    opacity: 1;
+  }
+}
+
 /*
 *分页样式
 */

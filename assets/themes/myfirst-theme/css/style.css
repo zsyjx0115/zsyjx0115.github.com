@@ -133,14 +133,17 @@ div.navbar-fixed{
 }
 
 @media screen and (max-width: 870px){
+  .navbar{
+    padding: 0px
+  }
   .navbar .navbar-header .st-default-search-input{
     width: 120px;
   }
 }
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 768px){
   .navbar .navbar-header .st-default-search-input{
-    right: 80px;
+    right: 90px;
   }
 }
 
@@ -191,6 +194,11 @@ div.navbar-fixed .nav .active>a:hover{
   background-color: #F8F8F8;
   margin: 0px;
 }
+@media screen and (max-width: 768px){
+  .container-content .row{
+    background-color: #FFF;
+  }
+}
 .container-content .row .article{
   background-color: #fff;
 }
@@ -200,6 +208,7 @@ div.navbar-fixed .nav .active>a:hover{
 
 .container-content .tags{
   padding-top: 20px;
+  padding-bottom: 30px;
 }
 .container-content .tags .tags-title{
   font-size: 20px;

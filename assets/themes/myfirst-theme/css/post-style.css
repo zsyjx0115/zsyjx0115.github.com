@@ -28,6 +28,34 @@
 	left: 300px;
 }
 
+@media screen and (max-width: 1200px){
+  .page-header > .pagination > .prev{
+    left: -250px;
+  }
+
+  .page-header > .pagination > .next{
+    left: 200px;
+  }
+}
+@media screen and (max-width: 870px){
+  .page-header > .pagination > .prev{
+    left: -200px;
+  }
+
+  .page-header > .pagination > .next{
+    left: 150px;
+  }
+}
+@media screen and (max-width: 768px){
+  .page-header > .pagination > .prev{
+    left: -150px;
+  }
+
+  .page-header > .pagination > .next{
+    left: 100px;
+  }
+}
+
 .page-header > .pagination > .prev:hover,
 .page-header > .pagination > .next:hover{
 	color: #fff;
@@ -97,3 +125,30 @@
   border-color: #8D0000 #8D0000 transparent #8D0000;
 }
 
+@media screen and (max-width: 870px) {
+  .briefbox .brief{
+    left: -65px;
+    top: -35px;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+  .briefbox .brief .comment-link{
+    top: 14px;
+    left: 7px;
+  }
+  /*勋章飘带*/
+  .briefbox .band{
+    top: 8px;
+    left: -48px;
+    height: 30px;
+    border-width: 0px 8px 13px 8px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .tags{
+    display: none;
+  }
+}

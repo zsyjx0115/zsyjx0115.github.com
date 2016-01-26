@@ -49,3 +49,17 @@ $(document).ready(function(){
 	})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
 _st('install','po5qdFZDk2T1AX6ThzTT','2.0.0');
+
+
+
+// function sum(){
+//     var array = arguments;
+//     var result = 0;
+//     for(var i=0;i<array.length;i++){
+//        if(parseInt(array[i]))
+//        	result += parseInt(array[i]);
+//     }
+//     console.log(result);
+// }
+
+// sum(1,2,3,false,null,"1.0");
