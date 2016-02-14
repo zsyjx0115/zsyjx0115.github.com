@@ -1,0 +1,30 @@
+---
+layout: post
+category : show
+title : 练习小成果展
+brief: 展示
+tags : [canvas, css, animate]
+excerpt: canvas元素是HTML5中新增的元素。首次接触canvas绘制，记录下它的基本使用方法，为之后制作一些小动画打下基础。
+link: 快点我快点我
+id: show20160115
+---
+{% include JB/setup %}
+
+<div>
+<h4>Count Down Animation</h4>
+
+<a href="http://zsyjx0115.github.io/CountDown" target="_blank">时钟倒计时小球动画效果</a>
+
+<h4>Pic Gallery</h4>
+
+<a href="http://zsyjx0115.github.io/PicGallery" target="_blank">画报展览效果</a>
+
+<h4>Lover Animate</h4>
+
+<a href="http://zsyjx0115.github.io/LoverAnimate" target="_blank">七夕情人节小动画，鹊桥相会</a>
+
+<h4>Cube</h4>
+
+<a href="http://zsyjx0115.github.io/Cube" target="_blank">三维效果初试</a>
+
+</div>
