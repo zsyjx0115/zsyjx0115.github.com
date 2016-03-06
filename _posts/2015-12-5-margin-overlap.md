@@ -8,7 +8,7 @@ excerpt: 两个毗邻盒子元素的margin值会共用，毗邻是指同级和�
 id: marginoverlap20151205
 ---
 
-##Margin叠加问题
+## Margin叠加问题
 
 两个毗邻盒子元素的margin值会共用，毗邻是指同级和嵌套元素，若这两个盒子之间没有非空内容、padding、border进行分隔，则都会共用margin值（貌似只是margin-top会共用）
 边界重叠是指两个或多个盒子(可能相邻也可能嵌套)的相邻边界(其间没有任何非空内容、补白、边框)重合在一起而形成一个单一边界。
@@ -34,7 +34,7 @@ id: marginoverlap20151205
 8. 根元素的垂直margin不会被重叠。
 
 
-##与父级元素重叠
+## 与父级元素重叠
 示例如：
 
 	body{width:100%; height:100%} 
@@ -48,7 +48,7 @@ id: marginoverlap20151205
 2. 两元素之间加上border或padding 
 3. 子元素脱离文档流，float或者absolute(CSS2.1规定浮动元素和绝对定位元素不参与Margin折叠)
 
-##同级元素重叠：
+## 同级元素重叠：
 
 前子元素的margin-bottom与后子元素的margin-top值会发生重叠，二者择其高者显示。
 

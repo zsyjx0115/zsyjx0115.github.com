@@ -10,7 +10,7 @@ id: lineheight20151209
 {% include JB/setup %}
 
 
-##定义
+## 定义
 
 行高，两行文字基线之间的距离。
 
@@ -20,7 +20,7 @@ id: lineheight20151209
 
 行高可以让单行文本垂直居中，其实是近似居中，根据字体大小不同而偏离中心位置距离不同。
 
-##行内框盒子模型
+## 行内框盒子模型
 
 所有内联元素样式表现都是该盒子模型。
 
@@ -33,7 +33,7 @@ id: lineheight20151209
 * 行框盒子line boxes：每一行就是一个行框盒子，每个行框盒子又是由一个个内联盒子组成，上述代码是一个行框盒子，其中包含三个内联盒子；
 * 包含盒子containing box：包含p标签在内的所有内容，此盒子由一行行的行框盒子组成
 
-##line-height的高度机理
+## line-height的高度机理
 
 内联元素的高度是由line-height决定的。
 
@@ -45,7 +45,7 @@ id: lineheight20151209
 
 如果行框盒子里有多个行高不同的内联盒子组成呢？并不一定是最高元素的高度。
 
-##line-height属性值
+## line-height属性值
 
 1. normal：默认属性值。跟着浏览器走，与元素字体关联。
 2. number：使用数值作为行高值。***line-height = font-size X number***
@@ -58,13 +58,13 @@ id: lineheight20151209
 * line-height:1.5 所有可继承元素会根据自身的font-size值重新计算行高
 * line-height:150%/1.5em 所有课继承元素不会重新计算行高，直接继承该元素的行高值
 
-##行高与图片
+## 行高与图片
 
 行高不会影响图片实际占用的高度，只是影响文字元素占用的高度。
 
-##实际应用
+## 实际应用
 
-###图片水平垂直居中（IE8+）
+### 图片水平垂直居中（IE8+）
 
 	.box{
 		line-height: 300px;
@@ -74,7 +74,7 @@ id: lineheight20151209
 		veitical-align: center;//垂直居中
 	}
 
-###多行文本水平垂直居中(IE8+)
+### 多行文本水平垂直居中(IE8+)
 
 多行文字水平垂直居中的实现与图片的实现一样，区别在于要把多行文字所在容器的display水平转换成inline-block，跟图片一样，以及重置外部继承的line-height和text-align属性值。
 
@@ -90,7 +90,7 @@ id: lineheight20151209
 		max-width: 100%;
 	}
 
-###使用行高来代替高度height
+### 使用行高来代替高度height
 
 在IE6/IE7浏览器中，设置height会让元素haslayout，呈块状样式，占据整行，此时设置line-height代替height就不会占据整行，依然是内联元素样式。
 
