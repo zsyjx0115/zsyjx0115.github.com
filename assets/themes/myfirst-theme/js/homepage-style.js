@@ -2,13 +2,11 @@ $(document).ready(function() {
     var loadtimer = setTimeout(function(){
         $(".waitload").css("display","block");
       $("body").css("overflow","hidden");
-      $("body").css("visibility","hidden");
-    },0);
+    },500);
     $(window).load(function(){
       clearTimeout(loadtimer);
       $(".waitload").css("display","none");
       $("body").css("overflow","auto");
-      $("body").css("visibility","visible");
     });
     var $doc = $(document);
     var $navbar = $(".navbar");
@@ -23,7 +21,6 @@ $(document).ready(function() {
             var height = $welcome.height();
             var scrollTop = $doc.scrollTop();
             if (height <= scrollTop + 40) {
-                $doc.scrollTop(height);
                 $navbar.addClass("navbar-fixed");
                 $(".container-content").css("margin-top", "120px");
             } else {
