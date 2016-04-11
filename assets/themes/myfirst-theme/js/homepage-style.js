@@ -21,7 +21,7 @@ $(document).ready(function() {
             var height = $welcome.height();
             var scrollTop = $doc.scrollTop();
             if (height <= scrollTop + 40) {
-                if (scrollTop < height + 60) 
+                if (scrollTop < height + 40) 
                     $doc.scrollTop(height);
                 $navbar.addClass("navbar-fixed");
                 $(".container-content").css("margin-top", "120px");
